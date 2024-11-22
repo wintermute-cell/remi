@@ -18,7 +18,7 @@ Beyond that, this is how you use Remi:
 - **Add a Reminder:** You can add a reminder by specifying a timestamp and a
   message. Timestamps can optionally contain a specific timestamp. If you want
   the reminder to appear a certain time before the actual deadline, provide the
-  duration parameter.
+  duration parameter. Without a duration, the reminder will always appear.
 
     ```bash
     remi add <timestamp> <message>
@@ -27,8 +27,8 @@ Beyond that, this is how you use Remi:
 
     - Example:
       ```bash
-      remi add 25.12.21@16:30 "Christmas party"
-      remi add 25.12.21 "3d" "Reminder before Christmas"
+      remi add 25.12.21@16:30 Christmas party
+      remi add 25.12.21 3d Reminder before Christmas  # Quoting is not required!
       ```
 
     - Aliases: `"add", "a", "+"`
@@ -43,7 +43,7 @@ Beyond that, this is how you use Remi:
 
 - **Remove a Reminder:** You can delete a specific reminder by providing the
   number next to it **from the latest Remi output** as an ID. (These may change
-  from run to run, as remi always tries to index incrementally from 0 to X)
+  from run to run, as remi always tries to index incrementally from 0 to N)
 
     ```bash
     remi remove <reminderId>
@@ -55,6 +55,7 @@ Beyond that, this is how you use Remi:
 
 ```bash
 git clone https://github.com/wintermute-cell/remi
+cd ./remi
 go build
 ./remi
 ```
