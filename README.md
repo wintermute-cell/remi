@@ -2,7 +2,8 @@
 
 > Remi is a straightforward command-line reminder for programmers.
 
-![remi logo](./logo.webp)
+<br>
+<img alt="remi mascot" src="logo.webp" width="240" height="240">
 
 It is designed to be simple and quick to use, to not get in your way.
 The recommended way to use Remi is to add `remi` to your shell rc, so the
